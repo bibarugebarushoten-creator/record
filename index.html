@@ -1,0 +1,526 @@
+<div class="ofgf-playlists">
+
+  <div class="ofgf-bg-text">
+    PLAYLIST ARCHIVE
+  </div>
+
+  <div class="ofgf-header">
+
+    <div class="ofgf-stars">
+      ✦✧★✩☆★✧✦
+    </div>
+
+    <h1>OFGF PLAYLISTS</h1>
+
+    <p>
+      click a record and enter a different corner of the scene.
+    </p>
+
+  </div>
+
+  <!-- RECORD WALL -->
+  <div class="ofgf-record-wall">
+
+    <a href="#listening" class="ofgf-record yellow">
+      <div class="record-inner">
+        <div class="record-hole"></div>
+        <span>WHAT I'M<br>LISTENING TO</span>
+      </div>
+    </a>
+
+    <a href="#underground" class="ofgf-record pink">
+      <div class="record-inner">
+        <div class="record-hole"></div>
+        <span>UNDERGROUND</span>
+      </div>
+    </a>
+
+    <a href="#funk" class="ofgf-record blue">
+      <div class="record-inner">
+        <div class="record-hole"></div>
+        <span>FUNK</span>
+      </div>
+    </a>
+
+    <a href="#livehouse" class="ofgf-record black">
+      <div class="record-inner">
+        <div class="record-hole"></div>
+        <span>LIVEHOUSE<br>ENERGY</span>
+      </div>
+    </a>
+
+  </div>
+
+
+  <!-- PLAYLIST SECTIONS -->
+
+  <section id="listening" class="playlist-section yellow-section">
+
+    <div class="playlist-label">
+      NOW PLAYING
+    </div>
+
+    <h2>WHAT I'M LISTENING TO</h2>
+
+    <p>
+      current obsessions, recent discoveries, and songs stuck in my head.
+    </p>
+
+    <!-- SPOTIFY EMBED -->
+    <div class="embed-box">
+      SPOTIFY / YOUTUBE EMBED HERE
+    </div>
+
+  </section>
+
+
+  <section id="underground" class="playlist-section pink-section">
+
+    <div class="playlist-label">
+      UNDERGROUND FILES
+    </div>
+
+    <h2>UNDERGROUND</h2>
+
+    <p>
+      smaller artists, hidden gems, and livehouse discoveries.
+    </p>
+
+    <div class="embed-box">
+      SPOTIFY / YOUTUBE EMBED HERE
+    </div>
+
+  </section>
+
+
+  <section id="funk" class="playlist-section blue-section">
+
+    <div class="playlist-label">
+      BASSLINES.EXE
+    </div>
+
+    <h2>FUNK</h2>
+
+    <p>
+      groove-heavy tracks, funky basslines, and late-night rhythm.
+    </p>
+
+    <div class="embed-box">
+      SPOTIFY / YOUTUBE EMBED HERE
+    </div>
+
+  </section>
+
+
+  <section id="livehouse" class="playlist-section black-section">
+
+    <div class="playlist-label">
+      LIVEHOUSE MODE
+    </div>
+
+    <h2>LIVEHOUSE ENERGY</h2>
+
+    <p>
+      songs that feel like sweating in a basement venue at midnight.
+    </p>
+
+    <div class="embed-box">
+      SPOTIFY / YOUTUBE EMBED HERE
+    </div>
+
+  </section>
+
+</div>
+
+<style>
+
+html{
+  scroll-behavior:smooth;
+}
+
+.ofgf-playlists{
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:60px 20px;
+
+  background:transparent;
+
+  font-family:"Courier New", monospace;
+}
+
+
+.ofgf-bg-text{
+
+  position:absolute;
+
+  top:20px;
+  right:-100px;
+
+  font-size:140px;
+
+  font-weight:900;
+
+  color:rgba(0,0,0,.05);
+
+  white-space:nowrap;
+
+  pointer-events:none;
+
+  transform:rotate(-8deg);
+}
+
+
+/* HEADER */
+
+.ofgf-header{
+
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+  margin-bottom:50px;
+}
+
+.ofgf-stars{
+
+  font-size:42px;
+
+  letter-spacing:-8px;
+
+  margin-bottom:10px;
+
+  color:black;
+
+  text-shadow:
+    2px 2px 0 #fff000;
+}
+
+.ofgf-header h1{
+
+  margin:0;
+
+  font-size:clamp(42px,8vw,90px);
+
+  line-height:.9;
+
+  letter-spacing:-4px;
+
+  color:black;
+
+  text-shadow:
+    4px 4px 0 #fff000;
+}
+
+.ofgf-header p{
+
+  margin-top:18px;
+
+  font-size:15px;
+
+  background:#fff000;
+
+  display:inline-block;
+
+  padding:8px 14px;
+
+  border:2px solid black;
+}
+
+
+
+/* RECORD WALL */
+
+.ofgf-record-wall{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:28px;
+
+  max-width:1100px;
+
+  margin:0 auto 80px auto;
+}
+
+
+.ofgf-record{
+
+  aspect-ratio:1/1;
+
+  border-radius:50%;
+
+  text-decoration:none;
+
+  position:relative;
+
+  transition:.2s;
+
+  border:3px solid black;
+
+  box-shadow:
+    10px 10px 0 black;
+}
+
+
+.ofgf-record:hover{
+
+  transform:
+    rotate(-6deg)
+    translateY(-8px);
+}
+
+
+.record-inner{
+
+  position:absolute;
+
+  inset:18px;
+
+  border-radius:50%;
+
+  border:2px dashed black;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:20px;
+}
+
+
+.record-hole{
+
+  position:absolute;
+
+  width:48px;
+  height:48px;
+
+  background:white;
+
+  border-radius:50%;
+
+  border:3px solid black;
+}
+
+
+.ofgf-record span{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:22px;
+
+  font-weight:900;
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+  color:black;
+}
+
+
+.yellow{
+  background:#fff000;
+}
+
+.pink{
+  background:#ff5ccf;
+}
+
+.blue{
+  background:#66dcff;
+}
+
+.black{
+  background:#111;
+}
+
+.black span{
+  color:#fff000;
+}
+
+.black .record-inner{
+  border-color:#fff000;
+}
+
+.black .record-hole{
+  border-color:#fff000;
+}
+
+
+
+/* PLAYLIST SECTIONS */
+
+.playlist-section{
+
+  max-width:1000px;
+
+  margin:0 auto 70px auto;
+
+  padding:34px;
+
+  border:3px solid black;
+
+  position:relative;
+
+  box-shadow:
+    10px 10px 0 black;
+}
+
+
+.playlist-label{
+
+  display:inline-block;
+
+  margin-bottom:18px;
+
+  padding:6px 10px;
+
+  background:black;
+
+  color:white;
+
+  font-size:12px;
+
+  font-weight:bold;
+
+  letter-spacing:1px;
+}
+
+
+.playlist-section h2{
+
+  margin:0;
+
+  font-size:clamp(36px,5vw,68px);
+
+  line-height:.9;
+
+  letter-spacing:-3px;
+}
+
+
+.playlist-section p{
+
+  margin-top:16px;
+
+  font-size:15px;
+
+  line-height:1.6;
+
+  max-width:650px;
+}
+
+
+.embed-box{
+
+  margin-top:28px;
+
+  padding:50px 20px;
+
+  border:2px dashed black;
+
+  text-align:center;
+
+  font-weight:bold;
+
+  background:rgba(255,255,255,.3);
+}
+
+
+.yellow-section{
+  background:rgba(255,240,0,.82);
+}
+
+.pink-section{
+  background:rgba(255,92,207,.82);
+}
+
+.blue-section{
+  background:rgba(102,220,255,.82);
+}
+
+.black-section{
+
+  background:#111;
+
+  color:white;
+
+  border-color:#fff000;
+
+  box-shadow:
+    10px 10px 0 #fff000;
+}
+
+.black-section .playlist-label{
+
+  background:#fff000;
+
+  color:black;
+}
+
+.black-section .embed-box{
+
+  border-color:#fff000;
+
+  background:rgba(255,255,255,.06);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .ofgf-record-wall{
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .ofgf-bg-text{
+
+    font-size:80px;
+  }
+}
+
+
+@media(max-width:600px){
+
+  .ofgf-record-wall{
+
+    grid-template-columns:1fr;
+  }
+
+  .ofgf-record{
+
+    max-width:280px;
+
+    margin:auto;
+  }
+
+  .playlist-section{
+
+    padding:24px;
+  }
+
+  .ofgf-header h1{
+
+    letter-spacing:-2px;
+  }
+}
+
+</style>
