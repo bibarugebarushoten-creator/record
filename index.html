@@ -45,221 +45,404 @@
   <section id="nico" class="playlist-section blue-section">
     <h2>NICO NICO MEGA MIX!</h2>
     <p>Vocaloid, utaite, Nico Nico classics, and internet music culture.</p>
-    <div class="embed-box"><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1fq3NWlvlmbGn7pxRM0hFj?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+
+    <div class="embed-box">
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/1fq3NWlvlmbGn7pxRM0hFj?utm_source=generator"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
   </section>
 
   <section id="livehouse" class="playlist-section red-section">
     <h2>FROM THE LIVE HOUSE</h2>
     <p>Livehouse discoveries, indie bands, and underground scene finds.</p>
-    <div class="embed-box">PASTE SPOTIFY EMBED HERE</div>
+
+    <div class="embed-box">
+      PASTE SPOTIFY EMBED HERE
+    </div>
   </section>
 
   <section id="top-picks" class="playlist-section yellow-section">
     <h2>OFGF TOP PICKS</h2>
     <p>Current rotation, repeat listens, and recent favorites.</p>
-    <div class="embed-box">PASTE SPOTIFY EMBED HERE</div>
+
+    <div class="embed-box">
+      PASTE SPOTIFY EMBED HERE
+    </div>
   </section>
 
   <section id="kanpai" class="playlist-section red-section">
     <h2>KANPAIIIII ☆</h2>
     <p>Japanese-inspired latin sounds, pop, rhythm, and party energy.</p>
-    <div class="embed-box">PASTE SPOTIFY EMBED HERE</div>
+
+    <div class="embed-box">
+      PASTE SPOTIFY EMBED HERE
+    </div>
   </section>
 
   <section id="funk" class="playlist-section blue-section">
     <h2>FUNK N SOUL</h2>
     <p>Funk, soul, groove, basslines, and city-pop-adjacent tracks.</p>
-    <div class="embed-box">PASTE SPOTIFY EMBED HERE</div>
+
+    <div class="embed-box">
+      PASTE SPOTIFY EMBED HERE
+    </div>
   </section>
 
 </div>
 
 <script>
 function ofgfRandomPlaylist() {
-  const links = ["#nico", "#livehouse", "#top-picks", "#kanpai", "#funk"];
-  window.location.href = links[Math.floor(Math.random() * links.length)];
+
+  const links = [
+    "#nico",
+    "#livehouse",
+    "#top-picks",
+    "#kanpai",
+    "#funk"
+  ];
+
+  window.location.href =
+    links[Math.floor(Math.random() * links.length)];
 }
 </script>
 
 <style>
-html {
-  scroll-behavior: smooth;
+
+html{
+  scroll-behavior:smooth;
 }
 
-.ofgf-playlist-page {
-  background: transparent;
-  font-family: "Courier New", monospace;
-  padding: 50px 18px;
-  color: #111;
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
 }
 
-.ofgf-playlist-header {
-  text-align: center;
-  margin-bottom: 42px;
+
+/* MAIN PAGE */
+
+.ofgf-playlist-page{
+
+  background:transparent;
+
+  font-family:"Courier New", monospace;
+
+  padding:50px 18px;
+
+  color:#111;
+
+  width:100%;
+
+  box-sizing:border-box;
 }
 
-.ofgf-stars {
-  font-size: 44px;
-  letter-spacing: -8px;
-  text-shadow: 2px 2px 0 #fff04a;
+
+/* HEADER */
+
+.ofgf-playlist-header{
+
+  text-align:left;
+
+  margin-bottom:42px;
 }
 
-.ofgf-playlist-header h1 {
-  margin: 0;
-  font-size: clamp(42px, 8vw, 92px);
-  line-height: .9;
-  font-weight: 900;
-  letter-spacing: -5px;
-  text-shadow: 4px 4px 0 #fff04a;
+.ofgf-stars{
+
+  font-size:44px;
+
+  letter-spacing:-8px;
+
+  text-shadow:
+    2px 2px 0 #fff04a;
 }
 
-.ofgf-playlist-header p {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 8px 14px;
-  background: #fff04a;
-  border: 2px solid #111;
-  font-weight: bold;
+.ofgf-playlist-header h1{
+
+  margin:0;
+
+  font-size:clamp(42px,8vw,92px);
+
+  line-height:.9;
+
+  font-weight:900;
+
+  letter-spacing:-5px;
+
+  text-shadow:
+    4px 4px 0 #fff04a;
 }
 
-.ofgf-record-wall {
-  max-width: 1150px;
-  margin: 0 auto 40px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 22px;
+.ofgf-playlist-header p{
+
+  display:inline-block;
+
+  margin-top:16px;
+
+  padding:8px 14px;
+
+  background:#fff04a;
+
+  border:2px solid #111;
+
+  font-weight:bold;
 }
 
-.ofgf-record {
-  display: block;
-  text-decoration: none;
-  color: #111;
-  padding: 12px;
-  background: rgba(255,255,255,.75);
-  border: 2px solid #111;
-  box-shadow: 7px 7px 0 #111;
-  transition: .18s ease;
+
+/* RECORD WALL */
+
+.ofgf-record-wall{
+
+  width:100%;
+
+  max-width:1150px;
+
+  margin:0 0 40px 0;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(5, minmax(150px, 1fr));
+
+  gap:18px;
 }
 
-.ofgf-record:hover {
-  transform: translate(-4px, -4px) rotate(-1deg);
-  box-shadow: 11px 11px 0 #111;
+
+.ofgf-record{
+
+  display:block;
+
+  min-width:0;
+
+  text-decoration:none;
+
+  color:#111;
+
+  padding:10px;
+
+  background:rgba(255,255,255,.75);
+
+  border:2px solid #111;
+
+  box-shadow:
+    6px 6px 0 #111;
+
+  transition:.18s ease;
 }
 
-.record-img {
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  border: 2px solid #111;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 14px;
+.ofgf-record:hover{
+
+  transform:
+    translate(-4px,-4px)
+    rotate(-1deg);
+
+  box-shadow:
+    10px 10px 0 #111;
 }
 
-.ofgf-record h2 {
-  margin: 0;
-  font-size: 19px;
-  line-height: 1;
-  letter-spacing: -1px;
-  text-transform: uppercase;
+
+.record-img{
+
+  aspect-ratio:1/1;
+
+  border-radius:10px;
+
+  border:2px solid #111;
+
+  background-size:cover;
+
+  background-position:center;
+
+  margin-bottom:12px;
 }
 
-.ofgf-record p {
-  margin: 10px 0 0;
-  font-size: 12px;
-  line-height: 1.35;
+
+.ofgf-record h2{
+
+  margin:0;
+
+  font-size:
+    clamp(14px,1.45vw,19px);
+
+  line-height:1;
+
+  letter-spacing:-1px;
+
+  text-transform:uppercase;
+
+  overflow-wrap:break-word;
 }
 
-.blue {
-  border-color: #2457a6;
+
+.ofgf-record p{
+
+  margin:9px 0 0;
+
+  font-size:11px;
+
+  line-height:1.35;
 }
 
-.red {
-  border-color: #c83932;
+
+/* COLORS */
+
+.blue{
+  border-color:#2457a6;
 }
 
-.yellow {
-  border-color: #d8a600;
+.red{
+  border-color:#c83932;
 }
 
-.ofgf-spin {
-  display: block;
-  margin: 36px auto 70px;
-  padding: 14px 28px;
-  background: #111;
-  color: #fff04a;
-  border: 2px solid #111;
-  font-family: "Courier New", monospace;
-  font-weight: 900;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 5px 5px 0 #c83932;
+.yellow{
+  border-color:#d8a600;
 }
 
-.ofgf-spin:hover {
-  background: #fff04a;
-  color: #111;
-  box-shadow: 5px 5px 0 #2457a6;
+
+/* RANDOM BUTTON */
+
+.ofgf-spin{
+
+  display:block;
+
+  margin:36px 0 70px;
+
+  padding:14px 28px;
+
+  background:#111;
+
+  color:#fff04a;
+
+  border:2px solid #111;
+
+  font-family:"Courier New", monospace;
+
+  font-weight:900;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  box-shadow:
+    5px 5px 0 #c83932;
 }
 
-.playlist-section {
-  max-width: 1000px;
-  margin: 0 auto 60px;
-  padding: 32px;
-  border: 3px solid #111;
-  box-shadow: 8px 8px 0 #111;
+.ofgf-spin:hover{
+
+  background:#fff04a;
+
+  color:#111;
+
+  box-shadow:
+    5px 5px 0 #2457a6;
 }
 
-.playlist-section h2 {
-  margin: 0;
-  font-size: clamp(34px, 5vw, 64px);
-  line-height: .9;
-  letter-spacing: -3px;
+
+/* PLAYLIST SECTIONS */
+
+.playlist-section{
+
+  max-width:1000px;
+
+  margin:0 0 60px;
+
+  padding:32px;
+
+  border:3px solid #111;
+
+  box-shadow:
+    8px 8px 0 #111;
 }
 
-.playlist-section p {
-  max-width: 650px;
-  line-height: 1.6;
+
+.playlist-section h2{
+
+  margin:0;
+
+  font-size:
+    clamp(34px,5vw,64px);
+
+  line-height:.9;
+
+  letter-spacing:-3px;
 }
 
-.embed-box {
-  margin-top: 24px;
-  padding: 45px 20px;
-  border: 2px dashed #111;
-  background: rgba(255,255,255,.35);
-  text-align: center;
-  font-weight: bold;
+.playlist-section p{
+
+  max-width:650px;
+
+  line-height:1.6;
 }
 
-.blue-section {
-  background: rgba(90, 145, 220, .32);
+
+.embed-box{
+
+  margin-top:24px;
+
+  padding:25px;
+
+  border:2px dashed #111;
+
+  background:
+    rgba(255,255,255,.35);
+
+  text-align:center;
+
+  font-weight:bold;
 }
 
-.red-section {
-  background: rgba(220, 70, 60, .28);
+
+/* SECTION COLORS */
+
+.blue-section{
+  background:rgba(90,145,220,.32);
 }
 
-.yellow-section {
-  background: rgba(255, 220, 70, .42);
+.red-section{
+  background:rgba(220,70,60,.28);
 }
 
-@media (max-width: 1000px) {
-  .ofgf-record-wall {
-    grid-template-columns: repeat(3, 1fr);
+.yellow-section{
+  background:rgba(255,220,70,.42);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+  .ofgf-record-wall{
+
+    grid-template-columns:
+      repeat(5, minmax(120px,1fr));
+
+    gap:12px;
+  }
+
+  .ofgf-record{
+
+    padding:8px;
+
+    box-shadow:
+      4px 4px 0 #111;
+  }
+
+  .ofgf-record h2{
+
+    font-size:13px;
+  }
+
+  .ofgf-record p{
+
+    font-size:10px;
   }
 }
 
-@media (max-width: 650px) {
-  .ofgf-record-wall {
-    grid-template-columns: 1fr;
-  }
-
-  .ofgf-record {
-    max-width: 330px;
-    margin: auto;
-  }
-
-  .playlist-section {
-    padding: 24px;
-  }
-}
 </style>
